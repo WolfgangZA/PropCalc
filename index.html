@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button id="PropCalcButton" onclick="">Propeller Calculator</button> <button id="Leaderboard" onclick="">Leaderboard</button>
+<center>
+
+  <label for="rpm">RPM:</label><br>
+  <input type="text" id="rpm" name="rpm"><br>
+  
+  <label for="gear_ratio">Gear Ratio:</label><br>
+  <input type="text" id="gear_ratio" name="gear_ratio"><br>
+  
+  <label for="pitch">Pitch:</label><br>
+  <input type="text" id="pitch" name="pitch"><br>
+    <label for="slip">Slip (0-10) <br>Value will automatically be calculated to percentage:</label><br>
+  <input type="text" id="slip" name="slip"><br>
+  <br>
+  <button id="CalculateButton" onclick="CalculateSpeed()">Calculate</button>
+  <p id="kmh"> - km/h</p>
+  <p id="knots"> - knots</p>
+  <br>
+  <br>
+  <div class="desc"><p>This section is designed to calculate the theoretical speed based on rpm, gear ratio, propeller pitch and slip (can be left at 0 for no boat load and 3 to 5 for a full boat)
+  <br>
+  Please refer to this pdf for a list of outboard gear ratio's <a href="https://www.kirschbaum.at/ki_prop/pdf/2015/RPM%20Chart.pdf">
+  </p>
+  </div>
+  <h1>Gearbox List</h1></a>
+  
+<script>
+function CalculateSpeed() {
+    var rpm = document.getElementById("rpm").value;
+	var gear_ratio = document.getElementById("gear_ratio").value;
+	var pitch = document.getElementById("pitch").value;
+	var slip = document.getElementById("slip").value;
+	var SlipTOPercent = slip/100;
+	
+	var kmhVAR = rpm/gear_ratio*pitch*60*0.0000254;
+	var kmhVAR2 = rpm/gear_ratio*pitch*60*0.0000254*SlipTOPercent;
+	
+	var knotsVAR = rpm/gear_ratio*pitch*60*0.0000254*0.539957;
+	var knotsVAR2 = rpm/gear_ratio*pitch*60*0.0000254*0.539957*SlipTOPercent;
+	
+	var kmhAfterSlip = kmhVAR-kmhVAR2;
+	var knotsAfterSlip = knotsVAR-knotsVAR2;
+	
+	var kmhfinalround = Math.round(kmhAfterSlip * 100) / 100;
+	var knotsfinalround = Math.round(knotsAfterSlip * 100) / 100;
+	
+    document.getElementById("kmh").innerHTML=kmhfinalround + " km/h";
+	document.getElementById("knots").innerHTML=knotsfinalround + " knots";
+	}
+</script>
+  </center>
+
+</body>
+</html>
+
+

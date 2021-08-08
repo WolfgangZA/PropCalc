@@ -1,0 +1,111 @@
+.desc{
+	color: red;
+	font-size: 10pt;
+}
+h1{
+	font-size: 15pt;
+}
+body{
+	
+}
+center{
+	border-radius: 25px;
+	border: 2px solid darkgreen;
+	padding: 20px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	align: center;
+	
+	background-image: url("https://cdn.shopify.com/s/files/1/0056/7276/3462/products/a8a2c71b-fe41-4377-81a8-b6d76342e43b.jpg?v=1571981670");;
+	background-repeat: no-repeat;
+	background-size: 35%;
+	background-position: center;
+}
+center.background{
+	opacity: 0.6;
+
+}
+#kmh{
+	font-weight: bold;
+	font-size: 16pt;
+	color: red;
+	background: #add8e6;
+	margin-left: auto;
+    margin-right: auto;
+	width: 10%;
+	margin-top: 5px;
+}
+#knots{
+	font-weight: bold;
+	font-size: 16pt;
+	color: red;
+	background: #add8e6;
+	margin-left: auto;
+    margin-right: auto;
+	width: 10%;
+	margin-top: 5px;
+}
+#rpm{
+	
+	font-size: 16pt;
+	border: 2px solid #73AD21;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 5px;
+	text-align: center;
+}
+#gear_ratio{
+	font-size: 16pt;
+	border: 2px solid #73AD21;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 5px;
+	text-align: center;
+}
+#pitch{
+	font-size: 16pt;
+	border: 2px solid #73AD21;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 5px;
+	text-align: center;
+}
+#slip{
+	font-size: 16pt;
+	border: 2px solid #73AD21;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 5px;
+	text-align: center;
+}
+#CalculateButton{
+	font-size: 16pt;
+	border: 2px solid white;
+	border-radius: 25px;
+	padding: 5px;
+	text-align: center;
+	background: #73AD21;
+	width: 25%
+}
+label{
+	font-size: 16pt;
+	padding-top: 10pt;
+	color: black;
+	font-weight: bold;
+	
+}
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#evinrude{
+	text-decoration: underline;
+}
+
+
+
+
